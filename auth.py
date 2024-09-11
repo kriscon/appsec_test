@@ -1,7 +1,7 @@
 import requests
 from fake_keys import *
 
-BASE_URI = "https://mysiteish.com/basic-auth"
+BASE_URI = "https://test-web.mynet.local"
 credentials = ('postman', API_KEY) # username and password as a tuple
 
 def test_basic_auth():
