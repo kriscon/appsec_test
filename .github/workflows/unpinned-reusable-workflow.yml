@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout using a tag (Unpinned)
-        uses: actions/checkout@v4 # Violates SHA-pinning policy
-        
+        #uses: actions/checkout@v4 # Violates SHA-pinning policy
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
       - name: Run a script
         run: echo "The nested unpinned workflow is running."
