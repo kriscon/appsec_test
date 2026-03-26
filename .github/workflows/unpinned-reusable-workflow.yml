@@ -1,0 +1,13 @@
+name: Reusable Security Test
+on:
+  workflow_call: # This makes it "Reusable"
+
+jobs:
+  unpinned-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout using a tag (Unpinned)
+        uses: actions/checkout@v4 # Violates SHA-pinning policy
+        
+      - name: Run a script
+        run: echo "The nested unpinned workflow is running."
